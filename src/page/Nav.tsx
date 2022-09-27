@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 import { PAGE_LIST } from "../constants";
 
+import { a } from "./test";
+
 const Nav: React.FC = () => {
   const history = useNavigate();
   const go = (id: string) => {
@@ -12,7 +14,7 @@ const Nav: React.FC = () => {
     <div className="nav">
       {PAGE_LIST.map((nav) => {
         return (
-          <div key={nav.id} onClick={() => go(nav.id)} className="nav-item">
+          <div className="nav-item" key={nav.id} onClick={() => go(nav.id)}>
             {nav.title}
           </div>
         );

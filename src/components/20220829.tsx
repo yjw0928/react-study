@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Button } from "antd";
-import { render } from "react-dom";
 
 const SubComp: React.FC = () => {
   console.log("subCompRemder");
@@ -19,8 +18,10 @@ const SubComp: React.FC = () => {
 
 const RenderProcess = () => {
   console.log("start-render");
+
   const [state, setState] = useState<number>(0);
   console.log("state", state);
+
   const add = useCallback(() => {
     setState(state + 1);
   }, [state]);

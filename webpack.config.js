@@ -24,6 +24,12 @@ module.exports = {
 
             },
             {
+                test: /\.ts?$/,
+                use: {
+                    loader: 'ts-loader'
+                }
+            },
+            {
                 test: /\.less$/i,
                 use: [
                     {
