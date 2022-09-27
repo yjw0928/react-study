@@ -1,4 +1,4 @@
-import { Button } from "antd";
+import { Button, message } from "antd";
 import React, { useMemo, useRef, useState } from "react";
 
 const Demo0912: React.FC = () => {
@@ -16,16 +16,28 @@ const Demo0912: React.FC = () => {
       <div>
         <Button
           onClick={() => {
-            setState(state + 1);
+            setState(Math.random());
           }}
         >
-          {count}
+          改变state
         </Button>
+        <Button
+          onClick={() => {
+            ref.current += 3;
+          }}
+        >
+          改变ref值
+        </Button>
+        <div>useMemo值：{count}</div>
+        <div>state:{state}</div>
+        <div>ref:{ref.current}</div>
       </div>
       <div>
         <p>结论</p>
-        <p>非state值变化useMemo计算值页面不会重新渲染</p>
-        <p>每次渲染的时候根据依赖值的变化会重新计算，本身不会主动触发渲染</p>
+        <p>
+          useMemo
+          会在组件每次触发更新的时候重新计算，props变化或者state的变化，基于依赖项进行比较
+        </p>
       </div>
     </div>
   );
