@@ -1,6 +1,7 @@
 import RenderProcess from "./components/20220829";
 import LoopRender from "./components/20220908";
 import Demo0912 from "./components/20220912";
+import TestLib from "./components/20221024";
 
 export const PAGE_LIST = [
   {
@@ -17,5 +18,10 @@ export const PAGE_LIST = [
     id: "20220912",
     title: "useMemo值变化页面是否渲染",
     page: Demo0912,
+  },
+  {
+    id: "20221024",
+    title: "引入自己的工具函数",
+    page: TestLib,
   },
 ];
