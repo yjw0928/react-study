@@ -1,6 +1,8 @@
 const env = require('process');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+
 module.exports = {
     entry: './src/index.tsx', // 入口文件
     output: { // 出口文件
@@ -59,6 +61,6 @@ module.exports = {
         port: 9000,
         historyApiFallback: true
     },
-    mode: 'development',
+    mode: env.mode,
     target: 'node',
 }
