@@ -20,6 +20,7 @@
     // 排除的文件
     "exclude": [
         "node_modules",
-        "**/*.spec.ts"
+        "**/*.spec.ts",
+        "**/*.js"
     ]
 }

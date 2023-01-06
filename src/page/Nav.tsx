@@ -1,9 +1,7 @@
+import { Menu } from "antd";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
-import { PAGE_LIST } from "../constants";
-
-import { a } from "./test";
+import { menuData } from "../constants";
 
 const Nav: React.FC = () => {
   const history = useNavigate();
@@ -11,15 +9,14 @@ const Nav: React.FC = () => {
     history(id);
   };
   return (
-    <div className="nav">
-      {PAGE_LIST.map((nav) => {
-        return (
-          <div className="nav-item" key={nav.id} onClick={() => go(nav.id)}>
-            {nav.title}
-          </div>
-        );
-      })}
-    </div>
+    <Menu
+      onClick={(info) => {
+        go(info.key);
+      }}
+      mode="inline"
+      items={menuData}
+      style={{ width: 256 }}
+    />
   );
 };
 

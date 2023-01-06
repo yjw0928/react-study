@@ -1,27 +1,58 @@
-import RenderProcess from "./components/20220829";
-import LoopRender from "./components/20220908";
-import Demo0912 from "./components/20220912";
-import TestLib from "./components/20221024";
+import Demo1 from "./study/react/1";
+import Demo2 from "./study/react/2";
+import Demo3 from "./study/react/3";
+import Demo4 from "./study/react/4";
 
-export const PAGE_LIST = [
+import JSDemo1 from "./study/javascript/1";
+import JSDemo2 from "./study/javascript/2";
+
+const REACT_MENU = [
   {
-    id: "20220829",
-    title: "hook组件渲染过程",
-    page: RenderProcess,
+    key: "20220829",
+    label: "hook组件渲染流程",
+    page: Demo1,
   },
   {
-    id: "20220908",
-    title: "多次修改state组件是如何渲染的",
-    page: LoopRender,
+    key: "20220908",
+    label: "useState探索",
+    page: Demo2,
   },
   {
-    id: "20220912",
-    title: "useMemo值变化页面是否渲染",
-    page: Demo0912,
+    key: "20220912",
+    label: "useMemo探索",
+    page: Demo3,
   },
   {
-    id: "20221024",
-    title: "引入自己的工具函数",
-    page: TestLib,
+    key: "20221226",
+    label: "hookDemo",
+    page: Demo4,
+  },
+];
+
+const JAVASCRIPT = [
+  {
+    key: "20230106",
+    label: "javascripz执行机制",
+    page: JSDemo1,
+  },
+  {
+    key: "20230107",
+    label: "事件循环",
+    page: JSDemo2,
+  },
+];
+
+export const ALL_PAGE = [...REACT_MENU, ...JAVASCRIPT];
+
+export const menuData = [
+  {
+    key: "react",
+    label: "React",
+    children: REACT_MENU,
+  },
+  {
+    key: "javascript",
+    label: "JavaScript",
+    children: JAVASCRIPT,
   },
 ];

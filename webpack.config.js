@@ -1,6 +1,7 @@
 const env = require('process');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { ProgressPlugin } = require("webpack")
 
 
 module.exports = {
@@ -8,6 +9,8 @@ module.exports = {
     output: { // 出口文件
         path: path.resolve(__dirname, 'dist'),
         filename: '[hash].bundle.js',
+        // 打包之前清空出口目录
+        clean: true,
     },
     module: { // 打包loader
         rules: [
@@ -21,6 +24,18 @@ module.exports = {
                             '@babel/preset-typescript',
                             '@babel/preset-react'
                         ],
+                        // antd 属于按需加载，需要使用babel-plugin-import
+                        // 加载组件的时候自动加载样式文件
+                        plugins: [
+                            [
+                                "import",
+                                {
+                                    "libraryName": "antd",
+                                    "style": true
+                                }
+                            ],
+                        ],
+                        compact: true
                     }
                 },
 
@@ -32,35 +47,56 @@ module.exports = {
                 }
             },
             {
-                test: /\.less$/i,
+                test: /\.less$/,
                 use: [
+                    'style-loader',
+                    'css-loader',
                     {
-                        loader: 'style-loader', // 从 JS 中创建样式节点
+                        loader: 'less-loader',
+                        options: { lessOptions: { javascriptEnabled: true } },
                     },
-                    {
-                        loader: 'css-loader', // 转化 CSS 为 CommonJS
-                    },
-                    {
-                        loader: 'less-loader', // 编译 Less 为 CSS
-                    },
+                ],
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    { loader: 'css-loader', options: { modules: false } },
+
                 ],
             },
         ]
     },
     // 文件解析
     resolve: {
-        extensions: ['.tsx', '.ts', '.js', '.less'],
+        extensions: ['.tsx', '.ts', '.js'],
     },
 
     plugins: [
-        new HtmlWebpackPlugin({ template: './src/index.html' })
+
+        // html插件
+        new HtmlWebpackPlugin({ template: './src/index.html' }),
+
+        // 显示打包进度
+        new ProgressPlugin({
+            activeModules: true,         // 默认false，显示活动模块计数和一个活动模块正在进行消息。
+            entries: true,  			   // 默认true，显示正在进行的条目计数消息。
+            modules: false,              // 默认true，显示正在进行的模块计数消息。
+            modulesCount: 5000,          // 默认5000，开始时的最小模块数。PS:modules启用属性时生效。
+            profile: false,         	   // 默认false，告诉ProgressPlugin为进度步骤收集配置文件数据。
+            dependencies: false,         // 默认true，显示正在进行的依赖项计数消息。
+            dependenciesCount: 10000,    // 默认10000，开始时的最小依赖项计数。PS:dependencies启用属性时生效。
+        })
+
+
     ],
     devtool: 'source-map',// 源码调试
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         port: 9000,
-        historyApiFallback: true
+        historyApiFallback: true,
+        hot: true
     },
-    mode: env.mode,
+    mode: "development",
     target: 'node',
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Main } from "./Main";
+import { Main } from "./Content";
 import Nav from "./Nav";
 import "./Home.less";
 
