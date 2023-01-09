@@ -1,31 +1,14 @@
 import Demo1 from "./study/react/1";
-import Demo2 from "./study/react/2";
-import Demo3 from "./study/react/3";
-import Demo4 from "./study/react/4";
 
 import JSDemo1 from "./study/javascript/1";
 import JSDemo2 from "./study/javascript/2";
+import JSDemo3 from "./study/javascript/3";
 
 const REACT_MENU = [
   {
     key: "20220829",
     label: "hook组件渲染流程",
     page: Demo1,
-  },
-  {
-    key: "20220908",
-    label: "useState探索",
-    page: Demo2,
-  },
-  {
-    key: "20220912",
-    label: "useMemo探索",
-    page: Demo3,
-  },
-  {
-    key: "20221226",
-    label: "hookDemo",
-    page: Demo4,
   },
 ];
 
@@ -39,6 +22,11 @@ const JAVASCRIPT = [
     key: "20230107",
     label: "事件循环",
     page: JSDemo2,
+  },
+  {
+    key: "20230108",
+    label: "迭代器和生成器",
+    page: JSDemo3,
   },
 ];
 
