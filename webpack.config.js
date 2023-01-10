@@ -1,4 +1,4 @@
-const env = require('process');
+const { env } = require('process');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ProgressPlugin } = require("webpack")
@@ -97,6 +97,6 @@ module.exports = {
         historyApiFallback: true,
         hot: true
     },
-    mode: "development",
+    mode: env.mode,
     target: 'node',
 }
