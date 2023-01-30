@@ -22,5 +22,3 @@ class A {
 const ins = new A();
 
 ins.parse("((this.T(0)).reduce(6))");
-
-console.log(ins.num);
