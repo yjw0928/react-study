@@ -1,7 +1,7 @@
 import { Menu } from "antd";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { menuData } from "../constants";
+import { menuData } from "../contants";
 
 const Nav: React.FC = () => {
   const history = useNavigate();
