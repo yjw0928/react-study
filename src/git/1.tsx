@@ -4,7 +4,7 @@ const Demo = () => {
   return (
     <div>
       这是开始的git
-      <code lang="git"></code>
+      <code lang="git">1111</code>
     </div>
   );
 };
