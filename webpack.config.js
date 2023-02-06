@@ -67,9 +67,9 @@ module.exports = {
             },
         ]
     },
-    // 文件解析
+
     resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
+        extensions: ['.tsx', '.ts', '.js'], // 忽略文件后缀
     },
 
     plugins: [

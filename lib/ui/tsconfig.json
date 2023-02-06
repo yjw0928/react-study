@@ -9,19 +9,23 @@
         "allowSyntheticDefaultImports": true,
         "jsx": "react",
         "moduleResolution": "node",
-        // 打包 生成类型声明文件
+        // 自动生成声明文件
         "declaration": true,
-        "declarationDir": "dist",
-        "experimentalDecorators": true // 装饰器支持
+        "declarationDir": "./lib/es",
+        "emitDeclarationOnly":true,
+        "esModuleInterop": true,
     },
+    // "ts-node": { 
+    //     "esm": true
+    // },
     // 包含的文件
     "include": [
-        "src/**/*"
+        "src/**/*",
+        "src/index.ts"
     ],
     // 排除的文件
     "exclude": [
         "node_modules",
-        "**/*.spec.ts",
-        "**/*.js"
+        "vite.config.js"
     ]
 }

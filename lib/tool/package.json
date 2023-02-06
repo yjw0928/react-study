@@ -1,7 +1,7 @@
 {
-  "name": "yatool",
+  "name": "@yjw/tool",
   "version": "1.0.5",
-  "description": "YJW的工具集",
+  "description": "小工具",
   "main": "lib/es/index.js",
   "files": [
     "lib"

@@ -17,11 +17,13 @@ importers:
       babel-plugin-import: ^1.13.5
       cross-env: ^7.0.3
       css-loader: ^6.7.1
+      highlight.js: ^11.7.0
       html-webpack-plugin: ^5.5.0
       less-loader: '6'
       react: ^18.1.0
       react-dom: ^18.1.0
       react-router-dom: ^6.3.0
+      rxjs: ^7.8.0
       style-loader: ^3.3.1
       ts-loader: ^9.3.1
       tslib: ^2.4.1
@@ -31,9 +33,11 @@ importers:
       webpack-dev-server: 3.11.2
     dependencies:
       antd: 4.24.7_biqbaboplfbrettd7655fr4n2y
+      highlight.js: 11.7.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-router-dom: 6.8.0_biqbaboplfbrettd7655fr4n2y
+      rxjs: 7.8.0
     devDependencies:
       '@babel/core': 7.20.12
       '@babel/preset-env': 7.20.2_@babel+core@7.20.12
@@ -56,6 +60,15 @@ importers:
       webpack: 5.64.3_webpack-cli@4.10.0
       webpack-cli: 4.10.0_ziwquwlmnrcz34csrp2obah77u
       webpack-dev-server: 3.11.2_wqsl5bcj7ztgmnu3j5qhstypi4
+
+  lib/ui:
+    specifiers:
+      highlight.js: ^11.7.0
+      react: ^18.1.0
+    dependencies:
+      highlight.js: 11.7.0
+    devDependencies:
+      react: 18.2.0
 
 packages:
 
@@ -3096,6 +3109,11 @@ packages:
     hasBin: true
     dev: true
 
+  /highlight.js/11.7.0:
+    resolution: {integrity: sha512-1rRqesRFhMO/PRF+G86evnyJkCgaZFOI+Z6kdj15TA18funfoqJXvgPCLSf0SWq3SRfg1j3HlDs8o4s3EGq1oQ==}
+    engines: {node: '>=12.0.0'}
+    dev: false
+
   /hpack.js/2.1.6:
     resolution: {integrity: sha512-zJxVehUdMGIKsRaNt7apO2Gqp0BdqW5yaiGHXXmbpvxgBYVZnAql+BJb4RO5ad2MgpbZKn5G6nMnegrH1FcNYQ==}
     dependencies:
@@ -5020,6 +5038,12 @@ packages:
       glob: 7.2.3
     dev: true
 
+  /rxjs/7.8.0:
+    resolution: {integrity: sha512-F2+gxDshqmIub1KdvZkaEfGDwLNpPvk9Fs6LD/MyQxNgMds/WH9OdDDXOmxUZpME+iSK3rQCctkL0DYyytUqMg==}
+    dependencies:
+      tslib: 2.5.0
+    dev: false
+
   /safe-buffer/5.1.2:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
     dev: true
@@ -5569,7 +5593,6 @@ packages:
 
   /tslib/2.5.0:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
-    dev: true
 
   /type-is/1.6.18:
     resolution: {integrity: sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==}
