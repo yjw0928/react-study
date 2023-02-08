@@ -1,19 +1,25 @@
 {
-  "name": "@yjw/ui",
+  "name": "yangjiwenui",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/es/index.js",
+  "main": "dist/yjwui.es.js",
+  "type": "module",
   "files": [
-    "lib"
+    "dist"
   ],
+  "module": "dist/yjwui.es.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "vite build & tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "react": "^18.1.0"
+    "react": "^18.1.0",
+    "typescript": "^4.9.5",
+    "vite": "^2.9.6"
   },
   "peerDependencies": {
     "react": "^18.1.0"

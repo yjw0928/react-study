@@ -11,7 +11,7 @@
         "moduleResolution": "node",
         // 自动生成声明文件
         "declaration": true,
-        "declarationDir": "./lib/es",
+        "outDir": "./dist",
         "emitDeclarationOnly":true,
         "esModuleInterop": true,
     },

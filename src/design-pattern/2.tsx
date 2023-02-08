@@ -113,6 +113,33 @@
 
 import React from "react";
 
+class Person {
+  public name: string;
+
+  private static age: number;
+
+  say() {
+    Person.age;
+  }
+}
+
+class XiaoGang extends Person {
+  say() {}
+}
+
 const Demo = () => {
-  return <div>666</div>;
+  return (
+    <div>
+      <span>面向对象3要素：继承 , 封装, 多肽</span>
+      <title>封装</title>
+      <ul>
+        <li>public: 公开的, 所有人都能访问</li>
+        <li>private: 私有的,只能在类中可以访问</li>
+        <li>static: 静态的，只能通过类本身访问 可以被继承</li>
+        <li>protected：只能在类中访问，子类中也可以访问</li>
+      </ul>
+    </div>
+  );
 };
+
+export default Demo;
