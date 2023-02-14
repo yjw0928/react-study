@@ -1,7 +1,7 @@
 const { env } = require('process');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { ProgressPlugin } = require("webpack")
+const { ProgressPlugin, HotModuleReplacementPlugin } = require("webpack")
 
 
 module.exports = {
@@ -71,6 +71,11 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.ts', '.js'], // 忽略文件后缀
     },
+    // externalsType: 'script',
+    externals: {
+        react: 'React',
+        // antd: 'Antd',
+    },
 
     plugins: [
 
@@ -86,10 +91,12 @@ module.exports = {
             profile: false,         	   // 默认false，告诉ProgressPlugin为进度步骤收集配置文件数据。
             dependencies: false,         // 默认true，显示正在进行的依赖项计数消息。
             dependenciesCount: 10000,    // 默认10000，开始时的最小依赖项计数。PS:dependencies启用属性时生效。
-        })
+        }),
 
-
+        //热更新
+        new HotModuleReplacementPlugin(),
     ],
+    watch: true, //自动编译
     devtool: 'source-map',// 源码调试
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
