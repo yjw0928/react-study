@@ -47,8 +47,3 @@ const App = () => {
 
 const root = createRoot(document.getElementById("root"));
 root.render(<App />);
-
-if (module.hot) {
-  //判断是否有热加载
-  module.hot.accept();
-}

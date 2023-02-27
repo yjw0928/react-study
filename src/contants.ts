@@ -3,6 +3,7 @@ import { JS_MENU } from "./javascript/contants";
 import { REACT_MENU } from "./react/constants";
 import { RXJS_MENU } from "./rxjs/constants";
 import { DESIGN_MODE } from "./design-pattern/contants";
+import { PRO_MENU } from "./projectTest/contants";
 
 export const ALL_PAGE = [
   ...REACT_MENU,
@@ -10,6 +11,7 @@ export const ALL_PAGE = [
   ...Git_MENU,
   ...RXJS_MENU,
   ...DESIGN_MODE,
+  ...PRO_MENU,
 ];
 
 export const menuData = [
@@ -38,5 +40,10 @@ export const menuData = [
     key: "rxjs",
     label: "Rxjs",
     children: RXJS_MENU,
+  },
+  {
+    key: "project",
+    label: "PROJECT",
+    children: PRO_MENU,
   },
 ];
