@@ -33,6 +33,7 @@ importers:
       ts-loader: ^9.3.1
       tslib: ^2.4.1
       typescript: ^4.7.4
+      url-loader: ^4.1.1
       webpack: 5.64.3
       webpack-cli: ^4.10.0
       webpack-dev-server: 3.11.2
@@ -69,6 +70,7 @@ importers:
       ts-loader: 9.4.2_xax3soakmvcdtac36yp5imfcgq
       tslib: 2.5.0
       typescript: 4.9.5
+      url-loader: 4.1.1_webpack@5.64.3
       webpack: 5.64.3_webpack-cli@4.10.0
       webpack-cli: 4.10.0_ziwquwlmnrcz34csrp2obah77u
       webpack-dev-server: 3.11.2_wqsl5bcj7ztgmnu3j5qhstypi4
@@ -6404,6 +6406,22 @@ packages:
   /urix/0.1.0:
     resolution: {integrity: sha512-Am1ousAhSLBeB9cG/7k7r2R0zj50uDRlZHPGbazid5s9rlF1F/QKYObEKSIunSjIOkJZqwRRLpvewjEkM7pSqg==}
     deprecated: Please see https://github.com/lydell/urix#deprecated
+    dev: true
+
+  /url-loader/4.1.1_webpack@5.64.3:
+    resolution: {integrity: sha512-3BTV812+AVHHOJQO8O5MkWgZ5aosP7GnROJwvzLS9hWDj00lZ6Z0wNak423Lp9PBZN05N+Jk/N5Si8jRAlGyWA==}
+    engines: {node: '>= 10.13.0'}
+    peerDependencies:
+      file-loader: '*'
+      webpack: ^4.0.0 || ^5.0.0
+    peerDependenciesMeta:
+      file-loader:
+        optional: true
+    dependencies:
+      loader-utils: 2.0.4
+      mime-types: 2.1.35
+      schema-utils: 3.1.1
+      webpack: 5.64.3_webpack-cli@4.10.0
     dev: true
 
   /url-parse/1.5.10:

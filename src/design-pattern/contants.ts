@@ -9,7 +9,7 @@ export const DESIGN_MODE = [
   },
   {
     key: "202302132333",
-    label: "工厂模式",
+    label: "创建型",
     page: Demo2,
   },
 ];

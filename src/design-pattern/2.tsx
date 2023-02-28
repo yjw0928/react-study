@@ -19,9 +19,7 @@ const product = new Creator().createProduct();
 //单例模式
 class SingleMode {
   static singleIns: SingleMode;
-  private constructor() {
-    return SingleMode.getInstance();
-  }
+  private constructor() {}
   static getInstance(): SingleMode {
     if (!SingleMode.singleIns) {
       SingleMode.singleIns = new SingleMode();

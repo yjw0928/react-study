@@ -64,6 +64,9 @@ module.exports = {
                     { loader: 'css-loader', options: { modules: false } },
 
                 ],
+            }, {
+                test: /\.(png|jpg|gif|svg)$/,
+                type: 'asset/inline',
             },
         ]
     },
@@ -105,5 +108,5 @@ module.exports = {
         hot: true
     },
     mode: env.mode,
-    target: 'node',
+    target: 'web',
 }

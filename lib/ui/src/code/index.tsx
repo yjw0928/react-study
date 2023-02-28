@@ -1,6 +1,6 @@
 import React, { FC, useEffect } from "react";
 import hljs from "highlight.js";
-import "highlight.js/styles/a11y-dark.css";
+import "highlight.js/styles/vs2015.css";
 
 const CodeContain: FC<any> = (props) => {
   useEffect(() => {
