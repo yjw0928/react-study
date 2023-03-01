@@ -42,7 +42,6 @@
 
 import React from "react";
 import { CodeContain } from "yangjiwenui";
-import ImgContainer from "yangjiwenui/dist/imgContain";
 
 class Person {
   public name: string; // 公开的都能访问

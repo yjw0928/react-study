@@ -2,6 +2,7 @@ import Demo1 from "./1";
 import Demo2 from "./2";
 import Demo3 from "./3";
 import Demo4 from "./4";
+import Demo5 from "./5";
 
 export const JS_MENU = [
   {
@@ -21,7 +22,12 @@ export const JS_MENU = [
   },
   {
     key: "20230207",
-    label: "引用类型",
+    label: "原型和原型链",
     page: Demo4,
+  },
+  {
+    key: "20230301",
+    label: "代理",
+    page: Demo5,
   },
 ];
