@@ -79,10 +79,10 @@ const Demo = () => {
         {`
           class Person {
             public name: string; // 公开的都能访问
-            private age: number; // 私有的只有在类中可以访问,不能被继承
+            private age: number; // 私有的只有在类中可以访问,不能被继承，不能被实例访问;
             static money: number; // 只能通过类本身访问，可以被继承
             private static home: string; // 只能通过类本身进行访问且不能被继承
-            protected sonName: string; // 只能在类中访问，子类也可以访问;
+            protected sonName: string; // 只能在类中访问，子类也可以访问,不能通过实例访问;
             say() {
               console.log(this.age + Person.money + this.sonName);
             }
