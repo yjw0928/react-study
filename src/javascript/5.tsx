@@ -1,5 +1,5 @@
 import React from "react";
-import { CodeContain } from "yangjiwenui";
+import { CodeContain } from "wmui";
 
 const getProxyHandler = (num: number): any => {
   return {

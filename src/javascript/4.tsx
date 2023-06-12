@@ -1,6 +1,6 @@
 import { Image } from "antd";
 import React from "react";
-import { CodeContain } from "yangjiwenui";
+import { CodeContain } from "wmui";
 
 class Parent {
   name: string;

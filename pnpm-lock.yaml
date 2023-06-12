@@ -37,7 +37,8 @@ importers:
       webpack: 5.64.3
       webpack-cli: ^4.10.0
       webpack-dev-server: 3.11.2
-      yangjiwenui: workspace:1.0.0
+      wmui: workspace:^1.0.0
+      yjw-cli: workspace:1.0.1
     dependencies:
       antd: 4.24.7_biqbaboplfbrettd7655fr4n2y
       exceljs: 1.13.0
@@ -48,7 +49,8 @@ importers:
       react-dom: 18.2.0_react@18.2.0
       react-router-dom: 6.8.0_biqbaboplfbrettd7655fr4n2y
       rxjs: 7.8.0
-      yangjiwenui: link:lib/ui
+      wmui: link:packages/ui
+      yjw-cli: link:packages/cli
     devDependencies:
       '@babel/core': 7.20.12
       '@babel/preset-env': 7.20.2_@babel+core@7.20.12
@@ -75,7 +77,10 @@ importers:
       webpack-cli: 4.10.0_ziwquwlmnrcz34csrp2obah77u
       webpack-dev-server: 3.11.2_wqsl5bcj7ztgmnu3j5qhstypi4
 
-  lib/tool:
+  packages/cli:
+    specifiers: {}
+
+  packages/tool:
     specifiers:
       ts-morph: ^16.0.0
       ts-node: ^10.9.1
@@ -87,7 +92,7 @@ importers:
       typescript: 4.9.5
       vite: 2.9.15
 
-  lib/ui:
+  packages/ui:
     specifiers:
       highlight.js: ^11.7.0
       react: ^18.1.0
@@ -3469,7 +3474,7 @@ packages:
     resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
-    deprecated: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+    deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
     requiresBuild: true
     dependencies:
       bindings: 1.5.0

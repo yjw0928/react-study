@@ -1,5 +1,5 @@
 {
-  "name": "yjwtool",
+  "name": "yjw-tool",
   "version": "1.0.5",
   "description": "小工具",
   "main": "dist/es/index.js",

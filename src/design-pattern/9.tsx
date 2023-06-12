@@ -1,55 +1,50 @@
-// // 观察者模式;
-// // 发布订阅  一对多;
+// 可观察对象 observerble
+// 观察者     observer
 
-// // 观察者   被观察者     observer  observerble
+// 一个主体可以添加多个观察者;
+// 主体和观察者分离，不主动触发，被动监听，解耦
 
-// // 主体
-// class Subject {
-//   state: number;
-//   observers: Array<Observer>;
-//   constructor() {
-//     this.state = 0;
-//     this.observers = [];
-//   }
+class Subject {
+  state: number;
+  observers: Array<Observer>;
+  constructor() {
+    this.state = 0;
+    this.observers = [];
+  }
 
-//   getState() {
-//     return this.state;
-//   }
+  subscribe(observer: Observer) {
+    this.observers.push(observer);
+  }
 
-//   setState(state) {
-//     this.state = state;
-//   }
+  unsubscribe(observer: Observer) {
+    this.observers = this.observers.filter((o) => o.name !== observer.name);
+  }
 
-//   notifyAllObservers() {
-//     this.observers.forEach((observer) => {
-//       observer.update();
-//     });
-//   }
-//   attachment(observer) {
-//     this.observers.push(observer);
-//   }
-// }
+  notifyObserver(context: any) {
+    this.observers.forEach((observer) => {
+      observer.update(context);
+    });
+  }
+}
 
-// // 观察者
-// class Observer {
-//   na: string;
-//   subject: Subject;
-//   constructor(name, subject) {
-//     this.na = name;
-//     this.subject = subject;
-//     this.subject.attachment(this);
-//   }
+// 观察者
+class Observer {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+  update(context: any) {
+    console.log(this.name + context);
+  }
+}
 
-//   update() {
-//     console.log(this.na + this.subject.getState());
-//   }
-// }
+const xiaohong = new Observer("小红");
 
-// // 一个主体可以添加多个观察者;
-// // 主体和观察者分离，不主动触发，被动监听，解耦
+const xiaogang = new Observer("小刚");
 
-import React from "react";
+const observerble = new Subject();
 
-const Demo = () => {
-  return <div>666</div>;
-};
+observerble.subscribe(xiaohong);
+observerble.subscribe(xiaogang);
+
+observerble.notifyObserver("动画片开播了");
