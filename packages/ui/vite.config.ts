@@ -8,9 +8,9 @@ export default defineConfig({
     outDir,
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
-      fileName: (format) => `wmui.${format}.js`,
+      fileName: (format) => `yjwui.${format}.js`,
       formats: ["es"],
-      name: "wmui",
+      name: "yjwui",
     },
     rollupOptions: {
       // 确保外部化处理那些你不想打包进库的依赖

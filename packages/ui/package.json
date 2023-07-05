@@ -1,13 +1,13 @@
 {
-  "name": "wmui",
+  "name": "yjwui",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/wmui.es.js",
+  "main": "dist/yjwui.es.js",
   "type": "module",
   "files": [
     "dist"
   ],
-  "module": "dist/wmui.es.js",
+  "module": "dist/yjwui.es.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "vite build & tsc",
