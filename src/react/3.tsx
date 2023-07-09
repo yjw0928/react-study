@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 
-const a: UploadProps;
 const Demo = () => {
   const ref = useRef();
   useEffect(() => {
