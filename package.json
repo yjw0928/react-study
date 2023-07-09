@@ -18,7 +18,8 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",
-    "rxjs": "^7.8.0"
+    "rxjs": "^7.8.0",
+    "yjwui0928": "^1.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",

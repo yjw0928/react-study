@@ -1,5 +1,5 @@
 import React from "react";
-import { CodeContain } from "yangjiwenui";
+import { CodeContain } from "yjwui0928";
 
 // 工厂模式
 class Product {

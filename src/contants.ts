@@ -33,9 +33,4 @@ export const menuData = [
     label: "Rxjs",
     children: RXJS_MENU,
   },
-  {
-    key: "project",
-    label: "PROJECT",
-    children: PRO_MENU,
-  },
 ];

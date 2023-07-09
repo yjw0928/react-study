@@ -12,14 +12,15 @@ const Home: React.FC = () => {
   };
   return (
     <div className="home">
-      <Menu
-        onClick={(info) => {
-          go(info.key);
-        }}
-        mode="inline"
-        items={menuData}
-        style={{ width: 256 }}
-      />
+      <div className="nav">
+        <Menu
+          onClick={(info) => {
+            go(info.key);
+          }}
+          mode="inline"
+          items={menuData}
+        />
+      </div>
 
       <div className="main">
         <Routes>

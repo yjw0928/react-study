@@ -1,6 +1,6 @@
 // 策略模式
 
-import { CodeContain } from "yangjiwenui";
+import { CodeContain } from "yjwui0928";
 import React from "react";
 
 function introduce(name: string) {

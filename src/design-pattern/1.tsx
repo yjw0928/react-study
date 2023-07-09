@@ -41,7 +41,7 @@
 // 策略模式  模板方法模式  观察者模式* 迭代器模式* 职责链模式 命令模式  备忘录模式  状态模式* 访问者模式 中介模式 解释器模式
 
 import React from "react";
-import { CodeContain } from "yangjiwenui";
+import { CodeContain } from "yjwui0928";
 
 class Person {
   public name: string; // 公开的都能访问
