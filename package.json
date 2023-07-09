@@ -1,6 +1,6 @@
 {
   "name": "react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "scripts": {
     "dev": "cross-env mode=development webpack server -c ./webpack.config.js --hot",
