@@ -1,3 +1,5 @@
+// 接口继承类
+
 class A {
   a: number;
   private c: string;
