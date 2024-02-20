@@ -1,5 +1,9 @@
 // 接口继承类
 
+export interface Test {
+  a: number;
+}
+
 class A {
   a: number;
   private c: string;
@@ -17,17 +21,3 @@ class BCls extends A {
     this.g = 1;
   }
 }
-
-console.log(BCls.d);
-
-// 接口继承类
-interface B extends A {
-  e: boolean;
-}
-
-const bDict: B = {
-  a: 1,
-  e: true,
-  g: 1,
-  c: "ddd",
-};

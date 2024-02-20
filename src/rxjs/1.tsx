@@ -1,5 +1,5 @@
 import React from "react";
-import { debounce, debounceTime, from, interval, of, Subject } from "rxjs";
+import { from, of, Subject } from "rxjs";
 
 const Demo: React.FC = () => {
   const sub1 = new Subject();

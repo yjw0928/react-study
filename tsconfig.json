@@ -12,7 +12,8 @@
         // 打包 生成类型声明文件
         "declaration": true,
         "declarationDir": "dist",
-        "experimentalDecorators": true // 装饰器支持
+        "experimentalDecorators": true, // 装饰器支持
+        "isolatedModules": true
     },
     // 包含的文件
     "include": [
