@@ -11,15 +11,13 @@
   "license": "ISC",
   "dependencies": {
     "antd": "^4.23.1",
-    "exceljs": "1.13.0",
     "file-saver": "^2.0.5",
     "highlight.js": "^11.7.0",
     "qr-image": "^3.2.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",
-    "rxjs": "^7.8.0",
-    "yjwui0928": "^1.0.1"
+    "rxjs": "^7.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",

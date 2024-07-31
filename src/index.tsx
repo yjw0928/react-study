@@ -2,7 +2,7 @@ import React from "react";
 import { Menu } from "antd";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
-import { ALL_PAGE, menuData } from "./contants";
+import { MENUS } from "./constants";
 import "./index.less";
 
 const Home: React.FC = () => {
@@ -18,13 +18,13 @@ const Home: React.FC = () => {
             go(info.key);
           }}
           mode="inline"
-          items={menuData}
+          items={MENUS}
         />
       </div>
 
       <div className="main">
         <Routes>
-          {ALL_PAGE.map((page) => {
+          {MENUS.map((page) => {
             const Page = page.page;
             return <Route key={page.key} path={page.key} element={<Page />} />;
           })}

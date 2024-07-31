@@ -8,7 +8,7 @@ module.exports = {
     entry: './src/index.tsx', // 入口文件
     output: { // 出口文件
         path: path.resolve(__dirname, 'dist'),
-        filename: '[hash].bundle.js',
+        filename: '[name].[contenthash].js',
         // 打包之前清空出口目录
         clean: true,
     },
@@ -60,6 +60,14 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            // you can specify a publicPath here
+                            // by default it uses publicPath in webpackOptions.output
+                            publicPath: "../",
+                        },
+                    },
                     'style-loader',
                     { loader: 'css-loader', options: { modules: false } },
 
@@ -74,11 +82,12 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.ts', '.js'], // 忽略文件后缀
     },
-    // externalsType: 'script',
-    externals: {
-        react: 'React',
-        // antd: 'Antd',
-    },
+    // externals: {
+    //     react: 'React',
+    //     // antd: 'Antd',
+    // },
+
+
 
     plugins: [
 
@@ -98,9 +107,44 @@ module.exports = {
 
         //热更新
         new HotModuleReplacementPlugin(),
+        // css
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].[contenthash].css',
+            chunkFilename: 'css/[id].[contenthash].css',
+            // https://github.com/facebook/create-react-app/issues/5372
+            ignoreOrder: true,
+        }),
     ],
-    watch: true, //自动编译
-    devtool: 'source-map',// 源码调试
+    optimization: {
+        // 允许webpack将代码分割成更小的块
+        splitChunks: {
+            // 分割规则
+            cacheGroups: {
+                vendors: {
+                    name: 'chunk-vendors',
+                    test: /[\\/]node_modules[\\/]/,
+                    // 规则优先级，越低优先级越高
+                    priority: -10,
+                    chunks: 'initial'
+                },
+                common: {
+                    name: 'chunk-common',
+                    //表示一个模块至少需要被引用多少次才会被抽离出来。设置为2意味着只有当模块至少被两个不同的入口点引用时，才会被抽离到公共块中。
+                    minChunks: 2,
+                    // 规则优先级
+                    priority: -20,
+                    // 从入口文件引入的
+                    chunks: 'initial',
+                    minSize: 0,
+                    // 如果模块已经存在就不重复创建
+                    reuseExistingChunk: true
+                }
+            }
+        }
+    },
+    watch: env.mode === 'development' ? true : false, //自动编译
+    // 源码调试
+    devtool: env.mode === 'development' ? 'source-map' : false,
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         port: 9000,

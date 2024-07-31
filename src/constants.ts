@@ -1,14 +1,7 @@
 import Demo1 from "./1";
 import Demo2 from "./3";
 
-
-
-type User = {
-  name: string;
-  like: string;
-};
-
-export const REACT_MENU = [
+export const MENUS = [
   {
     key: "20220829",
     label: "hook组件渲染流程",
