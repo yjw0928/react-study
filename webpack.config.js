@@ -3,7 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ProgressPlugin, HotModuleReplacementPlugin } = require("webpack")
 
-
+const devMode = env.mode === 'development'
 module.exports = {
     entry: './src/index.tsx', // 入口文件
     output: { // 出口文件
@@ -60,7 +60,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    {
+                    env.mode === 'dev' {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
                             // you can specify a publicPath here
@@ -86,8 +86,6 @@ module.exports = {
     //     react: 'React',
     //     // antd: 'Antd',
     // },
-
-
 
     plugins: [
 
@@ -118,6 +116,8 @@ module.exports = {
     optimization: {
         // 允许webpack将代码分割成更小的块
         splitChunks: {
+            // 只有大于3kb的才会被分割
+            minSize: 3000,
             // 分割规则
             cacheGroups: {
                 vendors: {
