@@ -7,11 +7,9 @@ const LoopRender = () => {
 
   const wait = (i: number) => {
     return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        setState(`state${i}`);
-        setLike(`like:${i}`);
-        resolve(i);
-      }, 100);
+      setState(`state${i}`);
+      setLike(`like:${i}`);
+      resolve(i);
     });
   };
 

@@ -2,6 +2,7 @@ const { env } = require('process');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ProgressPlugin, HotModuleReplacementPlugin } = require("webpack")
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const devMode = env.mode === 'development'
 module.exports = {
@@ -49,7 +50,15 @@ module.exports = {
             {
                 test: /\.less$/,
                 use: [
-                    'style-loader',
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            // you can specify a publicPath here
+                            // by default it uses publicPath in webpackOptions.output
+                            publicPath: "../",
+                        },
+                    },
+                    // 'style-loader',
                     'css-loader',
                     {
                         loader: 'less-loader',
@@ -60,15 +69,19 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    env.mode === 'dev' {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            // you can specify a publicPath here
-                            // by default it uses publicPath in webpackOptions.output
-                            publicPath: "../",
+                    // style-loader 将css 样式动态插入到style标签
+                    // 开发环境，热更新
+                    devMode ? 'style-loader' :
+                        // 将css 打包到单独的文件中，生产环境优化   
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {
+                                // you can specify a publicPath here
+                                // by default it uses publicPath in webpackOptions.output
+                                publicPath: "../",
+                            },
                         },
-                    },
-                    'style-loader',
+
                     { loader: 'css-loader', options: { modules: false } },
 
                 ],
@@ -104,7 +117,7 @@ module.exports = {
         }),
 
         //热更新
-        new HotModuleReplacementPlugin(),
+        // new HotModuleReplacementPlugin(),
         // css
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash].css',
