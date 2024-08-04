@@ -10,8 +10,8 @@
         "jsx": "react",
         "moduleResolution": "node",
         // 打包 生成类型声明文件
-        // "declaration": false,
-        // "declarationDir": "dist",
+        "declaration": true,
+        "declarationDir": "dist",
         "experimentalDecorators": true, // 装饰器支持
         "isolatedModules": true
     },

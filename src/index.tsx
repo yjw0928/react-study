@@ -2,7 +2,7 @@ import React from "react";
 import { Menu } from "antd";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
-import { MENUS } from "./constants";
+import { MENUS } from "./pages/constants";
 import "./index.less";
 
 const Home: React.FC = () => {

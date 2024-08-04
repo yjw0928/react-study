@@ -2,6 +2,7 @@ import Demo1 from "./1";
 import Demo2 from "./3";
 import Demo3 from "./2";
 import { Demo20240801 } from "./4";
+import Demo4 from "./FPS";
 
 export const MENUS = [
   {
@@ -23,5 +24,10 @@ export const MENUS = [
     key: "20240802",
     label: "组件执行顺序",
     page: Demo20240801,
+  },
+  {
+    key: "20240804",
+    label: "页面刷新帧数",
+    page: Demo4,
   },
 ];
