@@ -2,7 +2,7 @@ import Demo1 from "./1";
 import Demo2 from "./3";
 import Demo3 from "./2";
 import { Demo20240801 } from "./4";
-import Demo4 from "./FPS";
+import Demo4 from "./useLayoutEffect";
 
 export const MENUS = [
   {
