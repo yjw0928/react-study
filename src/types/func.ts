@@ -1,7 +1,11 @@
 class A {
-  func1(arg1: string, arg2: string) {}
+  func1(arg1: string, arg2: string) {
+    console.log(1111);
+  }
 
-  func2(arg1: string, arg2: number) {}
+  func2(arg1: string, arg2: number) {
+    console.log(2222);
+  }
 }
 
 // 定义A上面所有方法类型

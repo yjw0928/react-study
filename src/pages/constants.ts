@@ -3,6 +3,7 @@ import Demo2 from "./3";
 import Demo3 from "./2";
 import { Demo20240801 } from "./4";
 import Demo4 from "./useLayoutEffect";
+import Demo5 from "./reduxDemo/PageDemo";
 
 export const MENUS = [
   {
@@ -29,5 +30,10 @@ export const MENUS = [
     key: "20240804",
     label: "页面刷新帧数",
     page: Demo4,
+  },
+  {
+    key: "20240811",
+    label: "ReduxJS-Toolkit",
+    page: Demo5,
   },
 ];

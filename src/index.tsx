@@ -4,6 +4,8 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import { MENUS } from "./pages/constants";
 import "./index.less";
+import { Provider } from "react-redux";
+import { store } from "./pages/reduxDemo/store";
 
 const Home: React.FC = () => {
   const history = useNavigate();
@@ -38,11 +40,13 @@ const Home: React.FC = () => {
 // /* 任何路由都加载Home
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/*" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/*" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 };
 
