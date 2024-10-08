@@ -1,9 +1,10 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Button } from "antd";
+import { STR } from "../common/constants";
 
 const SubComp: React.FC = () => {
   console.log("subCompRemder");
-  const [count, setCount] = useState<number>(0);
+  const [count, setCount] = useState<number>(11111);
 
   const add = useCallback(() => {
     setCount(count + 1);
@@ -18,8 +19,8 @@ const SubComp: React.FC = () => {
 
 const RenderProcess = () => {
   console.log("start-render");
-
-  const [state, setState] = useState<number>(0);
+  console.log(STR);
+  const [state, setState] = useState<number>(111);
   console.log("state", state);
 
   const add = useCallback(() => {

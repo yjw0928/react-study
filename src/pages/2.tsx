@@ -1,10 +1,11 @@
 import React, { useCallback, useState } from "react";
 import { Button } from "antd";
+import { STR } from "../common/constants";
 
 const LoopRender = () => {
   const [state, setState] = useState("");
   const [like, setLike] = useState("");
-
+  console.log(STR);
   const wait = (i: number) => {
     return new Promise((resolve, reject) => {
       setState(`state${i}`);
