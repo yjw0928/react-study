@@ -9,7 +9,6 @@ const { join } = require('path');
  */
 
 const devConfig = {
-
     plugins: [
         // 生成分析报告
         new BundleAnalyzerPlugin({

@@ -66,6 +66,9 @@ importers:
       '@types/react-dom':
         specifier: ^18.0.6
         version: 18.0.10
+      '@types/webpack':
+        specifier: ^5.28.5
+        version: 5.28.5(webpack-cli@4.10.0)
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.21)
@@ -864,6 +867,9 @@ packages:
 
   '@types/use-sync-external-store@0.0.3':
     resolution: {integrity: sha512-EwmlvuaxPNej9+T4v5AuBPJa2x2UOJVdjCtDHgcDqitUeOtjnJKJ+apYjVcAoBEMjKW1VVFGZLUb5+qqa09XFA==}
+
+  '@types/webpack@5.28.5':
+    resolution: {integrity: sha512-wR87cgvxj3p6D0Crt1r5avwqffqPXUkNlnQ1mjU93G7gCuFjufZR4I6j8cz5g1F1tTYpfOOFvly+cmIQwL9wvw==}
 
   '@webassemblyjs/ast@1.11.1':
     resolution: {integrity: sha512-ukBh14qFLjxTQNTXocdyksN5QdM28S1CxHt2rdskFyL+xFV7VremuBLVbmCePj+URalXBENx/9Lm7lnhihtCSw==}
@@ -4565,6 +4571,17 @@ snapshots:
   '@types/scheduler@0.16.2': {}
 
   '@types/use-sync-external-store@0.0.3': {}
+
+  '@types/webpack@5.28.5(webpack-cli@4.10.0)':
+    dependencies:
+      '@types/node': 18.11.18
+      tapable: 2.2.1
+      webpack: 5.64.3(webpack-cli@4.10.0)
+    transitivePeerDependencies:
+      - '@swc/core'
+      - esbuild
+      - uglify-js
+      - webpack-cli
 
   '@webassemblyjs/ast@1.11.1':
     dependencies:

@@ -1,6 +1,5 @@
 
 // 公共的 webpack 配置
-
 const { resolve } = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MinicssExtractPlugin = require("mini-css-extract-plugin");
@@ -110,15 +109,15 @@ module.exports = {
         // 配置 loader
         rules: [
             // 配置 js loader
-            {
-                test: /\.js$/,
-                use: "babel-loader",
-                exclude: /node_modules/,
-            },
+            // {
+            //     test: /\.js$/,
+            //     use: "babel-loader",
+            //     exclude: /node_modules/,
+            // },
 
             // 匹配 .ts(x)
             {
-                test: /\.tsx?$/,
+                test: /\.(tsx|ts)?$/,
                 // 先暴力排除 node_modules 目录
                 exclude: /node_modules/,
                 use: [
@@ -209,10 +208,5 @@ module.exports = {
                 },
             },
         ],
-    },
-
-    optimization: {
-        // 暂时不要压缩代码
-        minimize: true,
     },
 };
