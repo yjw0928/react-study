@@ -34,7 +34,6 @@ const prodConfig = {
                     priority: -20,
 
                     chunks: 'all',
-
                     minSize: 0,
                     // 如果模块已经存在就不重复创建
                     reuseExistingChunk: true

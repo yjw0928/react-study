@@ -41,7 +41,10 @@ envVars.forEach((envVar) => {
 
 module.exports = {
     // 配置入口
-    entry: resolve(__dirname, "..", "src", "index.tsx"),
+    entry: {
+        entry1: resolve(__dirname, "..", "src", "index.tsx"),
+        // entry2: resolve(__dirname, "..", "src", "index2.ts"),
+    },
 
     // 配置打包出口
     output: {
