@@ -87,6 +87,9 @@ importers:
       css-loader:
         specifier: ^6.7.1
         version: 6.7.3(webpack@5.64.3)
+      dotenv:
+        specifier: ^16.4.7
+        version: 16.4.7
       html-webpack-plugin:
         specifier: ^5.5.0
         version: 5.5.0(webpack@5.64.3)
@@ -1500,6 +1503,10 @@ packages:
 
   dot-case@3.0.4:
     resolution: {integrity: sha512-Kv5nKlh6yRrdrGvxeJ2e5y2eRUpkUosIW4A2AS38zwSz27zu7ufDwQPi5Jhs3XAlGNetl3bmnGhQsMtkKJnj3w==}
+
+  dotenv@16.4.7:
+    resolution: {integrity: sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==, tarball: https://registry.npmmirror.com/dotenv/-/dotenv-16.4.7.tgz}
+    engines: {node: '>=12'}
 
   duplexer@0.1.2:
     resolution: {integrity: sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==}
@@ -5328,6 +5335,8 @@ snapshots:
     dependencies:
       no-case: 3.0.4
       tslib: 2.5.0
+
+  dotenv@16.4.7: {}
 
   duplexer@0.1.2: {}
 

@@ -26,7 +26,8 @@ const envVars = [
 
 // 读取当前构建环境对应的环境变量文件的所有内容，将其注入到环境变量中
 envVars.forEach((envVar) => {
-    const envFilePath = resolve(__dirname, "..", envVar);
+    const envFilePath = resolve(__dirname, '../', envVar);
+    console.log("envFilePath", envFilePath);
     const envFileExists = require("fs").existsSync(envFilePath);
     if (envFileExists) {
         require("dotenv").config({
@@ -42,8 +43,8 @@ envVars.forEach((envVar) => {
 module.exports = {
     // 配置入口
     entry: {
-        entry1: resolve(__dirname, "..", "src", "index.tsx"),
-        // entry2: resolve(__dirname, "..", "src", "index2.ts"),
+        entry1: resolve(__dirname, "..", "src", "entry1.tsx"),
+        entry2: resolve(__dirname, "..", "src", "entry2.ts"),
     },
 
     // 配置打包出口
@@ -111,12 +112,7 @@ module.exports = {
     module: {
         // 配置 loader
         rules: [
-            // 配置 js loader
-            // {
-            //     test: /\.js$/,
-            //     use: "babel-loader",
-            //     exclude: /node_modules/,
-            // },
+
 
             // 匹配 .ts(x)
             {

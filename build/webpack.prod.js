@@ -32,9 +32,20 @@ const prodConfig = {
                     minChunks: 2,
                     // 优先级
                     priority: -20,
-
-                    chunks: 'all',
                     minSize: 0,
+                    chunks: 'all',
+                    // 如果模块已经存在就不重复创建
+                    reuseExistingChunk: true
+                },
+                common2: {
+                    name: 'common2',
+                    // 公共模块
+                    //表示一个模块至少需要被引用多少次才会被抽离出来。设置为2意味着只有当模块至少被两个不同的入口点引用时，才会被抽离到公共块中。
+                    minChunks: 2,
+                    // 优先级
+                    priority: -30,
+                    minSize: 0,
+                    chunks: 'all',
                     // 如果模块已经存在就不重复创建
                     reuseExistingChunk: true
                 }

@@ -5,6 +5,7 @@ import { Demo20240801 } from './4';
 import Demo4 from './useLayoutEffect';
 import Demo5 from './reduxDemo/PageDemo';
 import Demo6 from './Use';
+import Demo7 from './useDeferredValue';
 
 export const MENUS = [
     {
@@ -41,5 +42,10 @@ export const MENUS = [
         key: '/20241230',
         label: 'use',
         page: Demo6,
+    },
+    {
+        key: '/20241231',
+        label: 'useDeferredValue',
+        page: Demo7,
     },
 ];
