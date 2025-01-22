@@ -4,7 +4,9 @@ import React, { memo, useEffect } from 'react';
 const Item: React.FC<{ value: number }> = ({ value }) => {
     let startTime = performance.now();
     while (performance.now() - startTime < 3) {}
-    console.log('Item渲染=========>', value);
+    useEffect(() => {
+        console.log(`Item=======>Effect${value}`);
+    }, [value]);
     return <div>{value}</div>;
 };
 
@@ -16,7 +18,6 @@ const List: React.FC<{ value: number }> = memo(({ value }) => {
     }
 
     useEffect(() => {
-        debugger;
         console.log(`List useEffect=========>${value}`);
     }, [value]);
 

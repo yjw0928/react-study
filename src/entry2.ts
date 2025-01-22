@@ -1,3 +1,3 @@
-import { STR } from "./common/constants";
+import { STR } from './common/constants';
 
-alert(`Hello world!${STR} 第二个入口`);
+console.log(`Hello world!${STR} 第二个入口`);

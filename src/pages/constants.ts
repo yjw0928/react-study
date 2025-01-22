@@ -6,6 +6,13 @@ import Demo4 from './useLayoutEffect';
 import Demo5 from './reduxDemo/PageDemo';
 import Demo6 from './Use';
 import Demo7 from './useDeferredValue';
+import Demo8 from './useActionState';
+import Demo9 from './useOptimistic';
+import Demo10 from './useTransition';
+import Demo11 from './useSyncExternalStore';
+import { lazy } from 'react';
+
+const Demo12 = lazy(() => import('./ReactLazy'));
 
 export const MENUS = [
     {
@@ -47,5 +54,30 @@ export const MENUS = [
         key: '/20241231',
         label: 'useDeferredValue',
         page: Demo7,
+    },
+    {
+        key: '/20250108',
+        label: 'useActionState',
+        page: Demo8,
+    },
+    {
+        key: '/20250109',
+        label: 'useOptimistic',
+        page: Demo9,
+    },
+    {
+        key: '/20250110',
+        label: 'useTransition',
+        page: Demo10,
+    },
+    {
+        key: '/20250111',
+        label: 'useSyncExternalStore',
+        page: Demo11,
+    },
+    {
+        key: '/20250112',
+        label: 'react-lazy',
+        page: Demo12,
     },
 ];

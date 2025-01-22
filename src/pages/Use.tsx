@@ -3,6 +3,9 @@ import React, { Suspense, use } from 'react';
 const Content = () => {
     const val = use<number>(
         new Promise((resolve) => {
+            const start = Date.now();
+
+            while (Date.now() - start < 100) {}
             resolve(2);
         })
     );
