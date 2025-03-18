@@ -23,9 +23,6 @@ const Demo = () => {
             updateOptimisticState('6666');
             const res = await request();
 
-            let start = Date.now();
-            // while (Date.now() - start < 2000) {}
-
             transtion(() => {
                 setState(['在异步之后被挂起了']);
             });

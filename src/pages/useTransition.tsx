@@ -1,6 +1,6 @@
 import { Button, Input, List } from 'antd';
 import React, { ChangeEvent, ChangeEventHandler, useEffect, useState, useTransition } from 'react';
-
+import '../assets/SourceHanSansCN-Normal-nor.js';
 const Demo: React.FC = () => {
     const [isPending, startTransition] = useTransition();
     const [keyWord, setKeyWord] = useState('');
