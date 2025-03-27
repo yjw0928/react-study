@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM to Word</title>
+        <script src="https://unpkg.com/html-docx-js@0.3.1/build/api.js"></script>
+    </head>
+
+    <body>
+        <div id="content">
+            <h1>示例标题</h1>
+            <p>这是一段示例文本。</p>
+        </div>
+        <button id="generateWord">生成 Word 文档</button>
+        <script>
+            document.getElementById('generateWord').addEventListener('click', function () {
+                const contentDiv = document.getElementById('content');
+                const html = contentDiv.outerHTML;
+
+                const converted = htmlDocx.asBlob(html);
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(converted);
+                a.download = 'generated_document.docx';
+                a.click();
+            });
+        </script>
+    </body>
+</html>

@@ -80,4 +80,9 @@ export const MENUS = [
         label: 'react-lazy',
         page: Demo12,
     },
+    {
+        key: '/20250319',
+        label: 'HTML转DOCX',
+        page: lazy(() => import('./generateDocx')),
+    },
 ];

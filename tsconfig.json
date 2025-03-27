@@ -10,10 +10,14 @@
         "jsx": "react",
         "moduleResolution": "node",
         // 打包 生成类型声明文件
-        "declaration": true,
-        "declarationDir": "dist",
+        "declaration": true, // 生成声明文件
+        "declarationDir": "dist/types", // 声明文件输出目录
         "experimentalDecorators": true, // 装饰器支持
-        "isolatedModules": true
+        "isolatedModules": true // 每个文件作为单独的模块
+    },
+    "ts-node": {
+        "esm": true, 
+        "experimentalSpecifierResolution": "node"
     },
     // 包含的文件
     "include": [

@@ -148,7 +148,7 @@ module.exports = {
                         loader: "ts-loader",
                         options: {
                             // 在编译 ts 的时候关闭类型检查，只进行代码转换
-                            transpileOnly: true,
+                            transpileOnly: false,
                         },
                     },
                 ],

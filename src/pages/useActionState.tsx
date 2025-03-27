@@ -10,7 +10,7 @@ const func1 = (pre: string, queryData: Record<string, any>): Promise<string> => 
 };
 
 const Demo1 = () => {
-    const [state, action, loading] = useActionState<string>(func1 as any);
+    const [state, action, loading] = useActionState<string>(func1 as any, '请求中');
 
     return (
         <div>
